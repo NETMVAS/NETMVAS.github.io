@@ -6,33 +6,56 @@
 
 ### add pppoe server mikrotik
 
+Создать **PPPoE** сервер
+
 - Обязательные параметры
 
-- Опциональные параметры
+    `pppoe_server` - название PPPoE сервера
+
+    `interface` - интерфейс, к которому будет привязан PPPoE сервер (например `ether2`) 
+  
+    `ppp_profile` - PPP профиль (например `profile1`, если такой создан)
+
+    `authentication` - профили безопасности (например `mcshap1,mschap2,chap,pap`)
 
 ### remove pppoe server mikrotik
 
+Удалить **PPPoE** сервер
+
 - Обязательные параметры
 
-- Опциональные параметры
+    `numbers_pppoe_server` - номер PPPoE-сервера (0-999)
 
 ### enable pppoe server mikrotik
 
+Активировать **PPPoE** сервер
+
 - Обязательные параметры
 
-- Опциональные параметры
+    `numbers_pppoe_server` - номер PPPoE-сервера (0-999)
 
 ### disable pppoe server mikrotik
 
+Деактивировать **PPPoE** сервер
+
 - Обязательные параметры
 
-- Опциональные параметры
+    `numbers_pppoe_server` - номер PPPoE-сервера (0-999)
 
 ### set pppoe server  mikrotik
 
 - Обязательные параметры
 
-- Опциональные параметры
+    `numbers_pppoe_server` - номер PPPoE-сервера (0-999)
+
+    `rename_pppoe_server` - название PPPoE сервера
+
+    `interface` - интерфейс, к которому будет привязан PPPoE сервер (например `ether2`) 
+  
+    `ppp_profile` - PPP профиль (например `profile1`, если такой создан)
+
+    `authentication` - профили безопасности (например `mcshap1,mschap2,chap,pap`)
+
 
 ## L2TP
 
