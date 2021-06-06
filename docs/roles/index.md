@@ -29,7 +29,7 @@
 |[config_dns](dns)|Настройка DNS|RouterOS: 100%, IOS: 100%|
 |[config_hostname](hostname)|Настройка hostname|RouterOS: 100%, IOS: 100%|
 |[config_interface_bridge](interface_bridge)|Настройка интерфейса: bridge|RouterOS: 100%, IOS: 0%|
-|config_interface_ethernet   | Настройка интерфейса: ethernet   |                |
+|[config_interface_ethernet](interface_ether)|Настройка интерфейса: ethernet|RouterOS: 100%, IOS: 100%|
 |config_interface_ppp_client | Настройка интерфейса: PPP-клиент |                |
 |config_interface_ppp_server | Настройка интерфейса: PPP-сервер |                |
 |config_interface_vpn        | Настройка интерфейса: VPN        |                |
