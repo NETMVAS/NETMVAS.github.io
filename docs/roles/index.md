@@ -22,8 +22,8 @@
 
 |             Роль            |         Краткое описание         | Готовность в % |
 |:---------------------------:|:--------------------------------:|----------------|
-|[config_bandwidth](bandwidth)|        Настройка bandwidth       |                |
-| config_capsman              | Настройка capsman                |                |
+|[config_bandwidth](bandwidth)|        Настройка bandwidth       |RouterOS: 100%, Cisco: 5%                |
+|[config_capsman](capsman)| Настройка capsman                |                |
 | config_dhcp_client          | Настройка DHCP-клиента           |                |
 | config_dhcp_server          | Настройка DHCP-сервера           |                |
 | config_dns                  | Настройка DNS                    |                |
