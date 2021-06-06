@@ -1,10 +1,12 @@
 site_name: NETMVAS Documentation
 nav:
     - Главная: index.md
-    - Установка: setup.md
     - Роли: roles/index.md
+    - Установка: setup.md
 
 theme:
   name: material
   palette:
-    primary: red
+    primary: white
+  logo: icon.png
+  favicon: icon.png
