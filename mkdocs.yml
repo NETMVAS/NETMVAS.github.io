@@ -1,6 +1,6 @@
 site_name: NETMVAS Documentation
 
-site_url: https://NETMVAS.github.io/netmvas.github.io
+site_url: https://NETMVAS.github.io/NETMVAS.github.io
 
 nav:
     - Главная: index.md
