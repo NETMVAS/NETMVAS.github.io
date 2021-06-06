@@ -1,4 +1,8 @@
 site_name: NETMVAS Documentation
+nav:
+    - Главная: index.md
+    - Установка: setup.md
+    - Роли: roles/index.md
 
 theme:
   name: material
