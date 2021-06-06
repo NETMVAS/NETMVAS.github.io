@@ -27,7 +27,7 @@
 |[config_dhcp_client](dhcp_client)|Настройка DHCP-клиента|RouterOS: 100%, IOS: 50%|
 |[config_dhcp_server](dhcp_server)|Настройка DHCP-сервера|RouterOS: 100%, IOS: 0%|
 |[config_dns](dns)|Настройка DNS|RouterOS: 100%, IOS: 100%|
-|config_hostname             | Настройка hostname               |                |
+|[config_hostname](hostname)| Настройка hostname|RouterOS: 100%, IOS: 100%|
 |config_interface_bridge     | Настройка интерфейса: bridge     |                |
 |config_interface_ethernet   | Настройка интерфейса: ethernet   |                |
 |config_interface_ppp_client | Настройка интерфейса: PPP-клиент |                |
