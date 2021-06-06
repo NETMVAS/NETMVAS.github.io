@@ -1,0 +1,6 @@
+site_name: NETMVAS Documentation
+
+theme:
+  name: material
+  palette:
+    primary: red
