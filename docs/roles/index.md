@@ -33,7 +33,7 @@
 |[config_interface_ppp_client](interface_pppclient)| Настройка интерфейса: PPP-клиент |RouterOS: 100%, IOS: 0%|
 |[config_interface_ppp_server](interface_pppserver)| Настройка интерфейса: PPP-сервер |RouterOS: 100%, IOS: 0%|
 |[config_interface_vpn](interface_vpn)| Настройка интерфейса: VPN|RouterOS: 100%, IOS: 0%|
-|config_interface_wireless   | Настройка интерфейса: Wireless   |RouterOS: 100%, IOS: 100%|
+|[config_interface_wireless](interface_wireless)| Настройка интерфейса: Wireless|RouterOS: 100%, IOS: 0%|
 |config_ip_address_interface | Настройка IP: Address interface  |RouterOS: 100%, IOS: 100%|
 |config_ip_firewall          | Настройка IP: Firewall           |RouterOS: 100%, IOS: 100%|
 |config_ip_route             | Настройка IP: Route              |RouterOS: 100%, IOS: 100%|
