@@ -533,252 +533,191 @@
 <h2 id="mikrotik">Mikrotik</h2>
 <h2 id="pppoe">PPPoE</h2>
 <h3 id="add-pppoe-server-mikrotik">add pppoe server mikrotik</h3>
+<p>Создать <strong>PPPoE</strong> сервер</p>
 <ul>
 <li>
 <p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
+<p><code>pppoe_server</code> - название PPPoE сервера</p>
+<p><code>interface</code> - интерфейс, к которому будет привязан PPPoE сервер (например <code>ether2</code>) </p>
+<p><code>ppp_profile</code> - PPP профиль (например <code>profile1</code>, если такой создан)</p>
+<p><code>authentication</code> - профили безопасности (например <code>mcshap1,mschap2,chap,pap</code>)</p>
 </li>
 </ul>
 <h3 id="remove-pppoe-server-mikrotik">remove pppoe server mikrotik</h3>
+<p>Удалить <strong>PPPoE</strong> сервер</p>
 <ul>
 <li>
 <p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
+<p><code>numbers_pppoe_server</code> - номер PPPoE-сервера (0-999)</p>
 </li>
 </ul>
 <h3 id="enable-pppoe-server-mikrotik">enable pppoe server mikrotik</h3>
+<p>Активировать <strong>PPPoE</strong> сервер</p>
 <ul>
 <li>
 <p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
+<p><code>numbers_pppoe_server</code> - номер PPPoE-сервера (0-999)</p>
 </li>
 </ul>
 <h3 id="disable-pppoe-server-mikrotik">disable pppoe server mikrotik</h3>
+<p>Деактивировать <strong>PPPoE</strong> сервер</p>
 <ul>
 <li>
 <p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
+<p><code>numbers_pppoe_server</code> - номер PPPoE-сервера (0-999)</p>
 </li>
 </ul>
 <h3 id="set-pppoe-server-mikrotik">set pppoe server  mikrotik</h3>
+<p>Измернить конфигурацию <strong>PPPoE</strong> Сервера</p>
 <ul>
 <li>
 <p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
+<p><code>numbers_pppoe_server</code> - номер PPPoE-сервера (0-999)</p>
+<p><code>rename_pppoe_server</code> - название PPPoE сервера</p>
+<p><code>interface</code> - интерфейс, к которому будет привязан PPPoE сервер (например <code>ether2</code>) </p>
+<p><code>ppp_profile</code> - PPP профиль (например <code>profile1</code>, если такой создан)</p>
+<p><code>authentication</code> - профили безопасности (например <code>mcshap1,mschap2,chap,pap</code>)</p>
 </li>
 </ul>
 <h2 id="l2tp">L2TP</h2>
 <h3 id="enable-l2tp-server-mikrotik">enable l2tp server mikrotik</h3>
-<ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
-</ul>
+<p>Активировать <strong>L2TP</strong> сервер. Параметры передавать не требуется.</p>
 <h3 id="disable-l2tp-server-mikrotik">disable l2tp server mikrotik</h3>
-<ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
-</ul>
+<p>Деактивировать <strong>L2TP</strong> сервер. Параметры передавать не требуется.</p>
 <h3 id="set-l2tp-server-mikrotik">set l2tp server mikrotik</h3>
+<p>Изменить конфигурацию <strong>L2TP</strong> сервера.</p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>ppp_profile</code> - PPP профиль (например <code>profile1</code>, если такой создан)</p>
+<p><code>authentication</code> - профили безопасности (например <code>mcshap1,mschap2,chap,pap</code>)</p>
+<p><code>one_session</code> - возможно ли подключение клиента с одного хоста? yes/no в двойных кавычках (например <code>"yes"</code>)</p>
 <h2 id="sstp">SSTP</h2>
 <h3 id="enable-sstp-server-mikrotik">enable sstp server mikrotik</h3>
-<ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
-</ul>
+<p>Активация <strong>SSTP</strong> сервера. Параметры передавать не требуется.</p>
 <h3 id="disable-sstp-server-mikrotik">disable sstp server mikrotik</h3>
-<ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
-</ul>
+<p>Деактивация <strong>SSTP</strong> сервера. Параметры передавать не требуется.</p>
 <h3 id="set-sstp-server-mikrotik">set sstp server mikrotik</h3>
+<p>Изменение конфигурации <strong>SSTP</strong> Сервера</p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>ppp_profile</code> - PPP профиль (например <code>profile1</code>, если такой создан)</p>
+<p><code>authentication</code> - профили безопасности (например <code>mcshap1,mschap2,chap,pap</code>)</p>
 <h2 id="pptp">PPTP</h2>
 <h3 id="enable-pptp-server-mikrotik">enable pptp server mikrotik</h3>
-<ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
-</ul>
+<p>Активация <strong>SSTP</strong> сервера. Параметры передавать не требуется.</p>
 <h3 id="disable-pptp-server-mikrotik">disable pptp server mikrotik</h3>
-<ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
-</ul>
+<p>Деактивация <strong>PPTP</strong> сервера. Параметры передавать не требуется.</p>
 <h3 id="set-pptp-server-mikrotik">set pptp server mikrotik</h3>
+<p>Изменение конфигурации <strong>PPTP</strong> сервера.</p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>ppp_profile</code> - PPP профиль (например <code>profile1</code>, если такой создан)</p>
+<p><code>authentication</code> - профили безопасности (например <code>mcshap1,mschap2,chap,pap</code>)</p>
 <h2 id="ppp">PPP</h2>
 <h3 id="add-ppp-server-mikrotik">add ppp server mikrotik</h3>
+<p>Создание <strong>PPP</strong> сервера</p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>ppp_server</code> - Название PPP сервера</p>
+<p><code>ppp_profile</code> - PPP профиль (например <code>profile1</code>, если такой создан)</p>
+<p><code>authentication</code> - профили безопасности (например <code>mcshap1,mschap2,chap,pap</code>)</p>
 <h3 id="remove-ppp-server-mikrotik">remove ppp server mikrotik</h3>
+<p>Удалить <strong>PPP</strong> сервер</p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>numbers_ppp_server</code> - Номер PPP сервера</p>
 <h3 id="enable-ppp-server-mikrotik">enable ppp server mikrotik</h3>
+<p>Активировать <strong>PPP</strong> сервер</p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>numbers_ppp_server</code> - Номер PPP сервера</p>
 <h3 id="disable-ppp-server-mikrotik">disable ppp server mikrotik</h3>
+<p>Деактивировать <strong>PPP</strong> сервер</p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>numbers_ppp_server</code> - Номер PPP сервера</p>
 <h3 id="set-ppp-server-mikrotik">set ppp server mikrotik</h3>
+<p>Изменить конфигурацию <strong>PPP</strong> сервера</p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>numbers_ppp_server</code> - Номер PPP сервера</p>
+<p><code>rename_ppp_server</code> - Название PPP сервера</p>
+<p><code>interface</code> - название интерфейса, который будет привязан к PPP серверу</p>
+<p><code>ppp_profile</code> - PPP профиль (например <code>profile1</code>, если такой создан)</p>
+<p><code>authentication</code> - профили безопасности (например <code>mcshap1,mschap2,chap,pap</code>)</p>
 <h3 id="add-ppp-profile-mikrotik">add ppp profile mikrotik</h3>
+<p>Создать профиль <strong>PPP</strong></p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>ppp_profile</code> - название PPP профиля</p>
+<p><code>bridge</code> - bridge на который будет привязан PPP сервер</p>
+<p><code>local_address</code> - Адрес туннеля или имя пула, из которого адрес назначается интерфейсу ppp локально</p>
+<p><code>remote_address</code> - Адрес туннеля или имя пула, из которого назначается адрес удаленному ppp-интерфейсу</p>
+<p><code>dns_server</code> - адрес DNS сервера (например <code>1.1.1.1</code>)</p>
 <h3 id="remove-ppp-profile-mikrotik">remove ppp profile mikrotik</h3>
+<p>Удалить <strong>PPP</strong> профиля</p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>ppp_profile</code> - название PPP профиля</p>
 <h3 id="set-ppp-profile-mikrotik">set ppp profile mikrotik</h3>
+<p>Изменить параметры <strong>PPP</strong> профиля</p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>ppp_profile</code> - название PPP профиля</p>
+<p><code>bridge</code> - bridge на который будет привязан PPP сервер</p>
+<p><code>local_address</code> - Адрес туннеля или имя пула, из которого адрес назначается интерфейсу ppp локально</p>
+<p><code>remote_address</code> - Адрес туннеля или имя пула, из которого назначается адрес удаленному ppp-интерфейсу</p>
+<p><code>dns_server</code> - адрес DNS сервера (например <code>1.1.1.1</code>)</p>
 <h3 id="add-ppp-secret-mikrotik">add ppp secret mikrotik</h3>
+<p>Создать <strong>PPP</strong> секрет </p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>username</code> - имя используемое для входа</p>
+<p><code>password</code> - пароль используемый для входа</p>
+<p><code>local_address</code> - IP-адрес, который будет установлен локально на PPP интерфейсе</p>
+<p><code>remote_address</code> - IP-адрес, который будет присвоен удаленному интерфейсу PPP</p>
+<p><code>ppp_profile</code> - какой <a href="https://wiki.mikrotik.com/wiki/Manual:PPP_AAA#User_profiles">user_profile</a> использовать</p>
 <h3 id="remove-ppp-secret-mikrotik">remove ppp secret mikrotik</h3>
+<p>Удалить <strong>PPP</strong> секрет </p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>username</code> - имя используемое для входа (по нему ищется PPP секрет)</p>
 <h3 id="enable-ppp-secret-mikrotik">enable ppp secret mikrotik</h3>
+<p>Активировать <strong>PPP</strong> секрет</p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>username</code> - имя используемое для входа (по нему ищется PPP секрет)</p>
 <h3 id="disable-ppp-secret-mikrotik">disable ppp secret mikrotik</h3>
+<p>Деактивировать <strong>PPP</strong> секрет </p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>username</code> - имя используемое для входа (по нему ищется PPP секрет)</p>
 <h3 id="set-ppp-secret-mikrotik">set ppp secret mikrotik</h3>
+<p>Изменить параметры <strong>PPP</strong> секрета </p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>username</code> - имя используемое для входа (по нему ищется PPP секрет)</p>
+<p><code>rename_username</code> - новое имя пользователя</p>
+<p><code>password</code> - пароль используемый для входа</p>
+<p><code>local_address</code> - IP-адрес, который будет установлен локально на PPP интерфейсе</p>
+<p><code>remote_address</code> - IP-адрес, который будет присвоен удаленному интерфейсу PPP</p>
+<p><code>ppp_profile</code> - какой <a href="https://wiki.mikrotik.com/wiki/Manual:PPP_AAA#User_profiles">user_profile</a> использовать</p>
 <h2 id="cisco">Cisco</h2>
 <h3 id="role_1">role</h3>
 <ul>
