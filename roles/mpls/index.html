@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://NETMVAS.github.io/NETMVAS.github.io/roles/ip_firewall/">
+        <link rel="canonical" href="https://NETMVAS.github.io/NETMVAS.github.io/roles/mpls/">
       
       <link rel="icon" href="../../icon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
     
     
       
-        <title>IP: Firewall - NETMVAS Documentation</title>
+        <title>MPLS - NETMVAS Documentation</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ip-firewall" class="md-skip">
+        <a href="#mpls" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              IP: Firewall
+              MPLS
             
           </span>
         </div>
@@ -240,95 +240,89 @@
     Mikrotik
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filter" class="md-nav__link">
-    Filter
-  </a>
-  
-    <nav class="md-nav" aria-label="Filter">
+    <nav class="md-nav" aria-label="Mikrotik">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#add-firewall-filter-mikrotik" class="md-nav__link">
-    add firewall filter mikrotik
+  <a href="#add-mpls-ldp-interface-mikrotik" class="md-nav__link">
+    add mpls ldp interface mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#remove-firewall-filter-mikrotik" class="md-nav__link">
-    remove firewall filter mikrotik
+  <a href="#remove-mpls-ldp-interface-mikrotik" class="md-nav__link">
+    remove mpls ldp interface mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#enable-firewall-filter-mikrotik" class="md-nav__link">
-    enable firewall filter mikrotik
+  <a href="#enable-mpls-ldp-interface-mikrotik" class="md-nav__link">
+    enable mpls ldp interface mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#disable-firewall-filter-mikrotik" class="md-nav__link">
-    disable firewall filter mikrotik
+  <a href="#disable-mpls-ldp-interface-mikrotik" class="md-nav__link">
+    disable mpls ldp interface mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#set-firewall-filter-mikrotik" class="md-nav__link">
-    set firewall filter mikrotik
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nat" class="md-nav__link">
-    NAT
-  </a>
-  
-    <nav class="md-nav" aria-label="NAT">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-firewall-nat-mikrotik" class="md-nav__link">
-    add firewall nat mikrotik
+  <a href="#set-mpls-ldp-interface-mikrotik" class="md-nav__link">
+    set mpls ldp interface mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#remove-firewall-nat-mikrotik" class="md-nav__link">
-    remove firewall nat mikrotik
+  <a href="#add-mpls-ldp-neighbor-mikrotik" class="md-nav__link">
+    add mpls ldp neighbor mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#enable-firewall-nat-mikrotik" class="md-nav__link">
-    enable firewall nat mikrotik
+  <a href="#remove-mpls-ldp-neighbor-mikrotik" class="md-nav__link">
+    remove mpls ldp neighbor mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#disable-firewall-nat-mikrotik" class="md-nav__link">
-    disable firewall nat mikrotik
+  <a href="#enable-mpls-ldp-neighbor-mikrotik" class="md-nav__link">
+    enable mpls ldp neighbor mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#set-firewall-nat-mikrotik" class="md-nav__link">
-    set firewall nat mikrotik
+  <a href="#disable-mpls-ldp-neighbor-mikrotik" class="md-nav__link">
+    disable mpls ldp neighbor mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-mpls-ldp-neighbor-mikrotik" class="md-nav__link">
+    set mpls ldp neighbor mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-mpls-settings-mikrotik" class="md-nav__link">
+    set mpls settings mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-mpls-ldp-settings-mikrotik" class="md-nav__link">
+    set mpls ldp settings mikrotik
   </a>
   
 </li>
@@ -342,19 +336,6 @@
   <a href="#cisco" class="md-nav__link">
     Cisco
   </a>
-  
-    <nav class="md-nav" aria-label="Cisco">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#role" class="md-nav__link">
-    role
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -371,96 +352,116 @@
               
                 
                 
-                <h1 id="ip-firewall">IP: Firewall</h1>
+                <h1 id="mpls">MPLS</h1>
 <h2 id="mikrotik">Mikrotik</h2>
-<h2 id="filter">Filter</h2>
-<h3 id="add-firewall-filter-mikrotik">add firewall filter mikrotik</h3>
-<p>Добавить правило <strong>Firewall</strong></p>
+<h3 id="add-mpls-ldp-interface-mikrotik">add mpls ldp interface mikrotik</h3>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>dst_address</code> - Сопоставляет пакеты, пункт назначения которых равен указанному IP или попадает в указанный диапазон IP</p>
-<p><code>dst_port</code> - Список номеров портов назначения или диапазонов номеров портов</p>
-<p><code>src_address</code> - Сопоставляет пакеты, источник которых равен указанному IP или попадает в указанный диапазон IP.</p>
-<p><code>src_port</code> - Список портов источника и диапазонов портов источника. Применяется, только если протокол TCP или UDP.</p>
-<p><code>firewall_action</code> - действие для правила (например <code>accept</code>)</p>
-<p><code>chain</code> - Указывает, к какой цепочке будет добавлено правило. Если входные данные не совпадают с именем уже
-  определенной цепи, будет создана новая цепь</p>
-<p><code>protocol</code> - Сопоставляет определенный IP-протокол, указанный именем или номером протокола</p>
-<h3 id="remove-firewall-filter-mikrotik">remove firewall filter mikrotik</h3>
-<p>Удалить правило <strong>Firewall</strong></p>
+<p><code>interface</code> - Имя интерфейса, на котором необходимо запустить LDP</p>
+<p><code>transport_address</code> - Используемый транспортный адрес, если он отличается от общих настроек. Если установлено значение
+  0.0.0.0, используется транспортный адрес из общих настроек.</p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>dynamic_neighbors</code> - Определяет, обнаруживать ли соседей динамически или использовать только статически настроенные в
+  меню LDP соседи. (yes/no в кавычках, по умолчанию <code>"yes"</code>)</p>
+<p><code>hello_interval</code> - Интервал между пакетами hello, которые маршрутизатор посылает через этот интерфейс (по
+  умолчанию <code>5s</code>)</p>
+<p><code>hold_time</code> - Интервал, после которого сосед объявляется недосягаемым (по умолчанию <code>15s</code>)</p>
+<h3 id="remove-mpls-ldp-interface-mikrotik">remove mpls ldp interface mikrotik</h3>
+<p>Удалить <strong>MPLS LDP</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>ip_firewall_filter</code> - номер фильтра</p>
-<h3 id="enable-firewall-filter-mikrotik">enable firewall filter mikrotik</h3>
-<p>Активировать правило <strong>Firewall</strong></p>
+<p><code>numbers_ldp_interface</code> - название интерфейса</p>
+<h3 id="enable-mpls-ldp-interface-mikrotik">enable mpls ldp interface mikrotik</h3>
+<p>Активировать <strong>MPLS LDP</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>ip_firewall_filter</code> - номер фильтра</p>
-<h3 id="disable-firewall-filter-mikrotik">disable firewall filter mikrotik</h3>
-<p>Деактивировать правило <strong>Firewall</strong></p>
+<p><code>numbers_ldp_interface</code> - название интерфейса</p>
+<h3 id="disable-mpls-ldp-interface-mikrotik">disable mpls ldp interface mikrotik</h3>
+<p>Деактивировать <strong>MPLS LDP</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>ip_firewall_filter</code> - номер фильтра</p>
-<h3 id="set-firewall-filter-mikrotik">set firewall filter mikrotik</h3>
-<p>Изменить конфигурацию правила <strong>Firewall</strong></p>
+<p><code>numbers_ldp_interface</code> - название интерфейса</p>
+<h3 id="set-mpls-ldp-interface-mikrotik">set mpls ldp interface mikrotik</h3>
+<p>Изменить конфигурацию <strong>MPLS LDP</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>ip_firewall_filter</code> - номер фильтра</p>
-<p><code>dst_address</code> - Сопоставляет пакеты, пункт назначения которых равен указанному IP или попадает в указанный диапазон IP</p>
-<p><code>dst_port</code> - Список номеров портов назначения или диапазонов номеров портов</p>
-<p><code>src_address</code> - Сопоставляет пакеты, источник которых равен указанному IP или попадает в указанный диапазон IP.</p>
-<p><code>src_port</code> - Список портов источника и диапазонов портов источника. Применяется, только если протокол TCP или UDP.</p>
-<p><code>firewall_action</code> - действие для правила (например <code>accept</code>)</p>
-<p><code>chain</code> - Указывает, к какой цепочке будет добавлено правило. Если входные данные не совпадают с именем уже
-  определенной цепи, будет создана новая цепь</p>
-<p><code>protocol</code> - Сопоставляет определенный IP-протокол, указанный именем или номером протокола</p>
-<h2 id="nat">NAT</h2>
-<h3 id="add-firewall-nat-mikrotik">add firewall nat mikrotik</h3>
-<p>Добавить <strong>NAT</strong></p>
+<p><code>numbers_ldp_interface</code> - название интерфейса</p>
+<p><code>interface</code> - Имя интерфейса, на котором необходимо запустить LDP</p>
+<p><code>transport_address</code> - Используемый транспортный адрес, если он отличается от общих настроек. Если установлено значение
+  0.0.0.0, используется транспортный адрес из общих настроек.</p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>dynamic_neighbors</code> - Определяет, обнаруживать ли соседей динамически или использовать только статически настроенные в
+  меню LDP соседи. (yes/no в кавычках, по умолчанию <code>"yes"</code>)</p>
+<h3 id="add-mpls-ldp-neighbor-mikrotik">add mpls ldp neighbor mikrotik</h3>
+<p>Добавить <strong>MPLS LDP Neighbor</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>dst_address</code> - Сопоставляет пакеты, пункт назначения которых равен указанному IP или попадает в указанный диапазон IP</p>
-<p><code>dst_port</code> - Список номеров портов назначения или диапазонов номеров портов</p>
-<p><code>src_address</code> - Сопоставляет пакеты, источник которых равен указанному IP или попадает в указанный диапазон IP.</p>
-<p><code>src_port</code> - Список портов источника и диапазонов портов источника. Применяется, только если протокол TCP или UDP.</p>
-<p><code>firewall_action</code> - действие для правила (например <code>accept</code>)</p>
-<p><code>chain</code> - Указывает, к какой цепочке будет добавлено правило. Если входные данные не совпадают с именем уже
-  определенной цепи, будет создана новая цепь</p>
-<p><code>out_interface</code> - Интерфейс, через который пакет покидает маршрутизатор</p>
-<p><code>protocol</code> - Сопоставляет определенный IP-протокол, указанный именем или номером протокола</p>
-<h3 id="remove-firewall-nat-mikrotik">remove firewall nat mikrotik</h3>
-<p>Удалить <strong>NAT</strong></p>
+<p><code>transport_address</code> - Транспортный адрес, используемый удаленным "соседом"</p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>send_targeted</code> - Указывает, отправлять ли целевые сообщения, используемые для целевых (не подключенных напрямую)
+  сеансов LDP. yes/no в кавычках (по умолчанию <code>"yes"</code>)</p>
+<h3 id="remove-mpls-ldp-neighbor-mikrotik">remove mpls ldp neighbor mikrotik</h3>
+<p>Удалить <strong>MPLS LDP Neighbor</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>ip_firewall_nat</code> - номер фильтра</p>
-<h3 id="enable-firewall-nat-mikrotik">enable firewall nat mikrotik</h3>
-<p>Активировать <strong>NAT</strong></p>
+<p><code>numbers_ldp_neighbor</code> - номер соседа</p>
+<h3 id="enable-mpls-ldp-neighbor-mikrotik">enable mpls ldp neighbor mikrotik</h3>
+<p>Активировать <strong>MPLS LDP Neighbor</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>ip_firewall_nat</code> - номер фильтра</p>
-<h3 id="disable-firewall-nat-mikrotik">disable firewall nat mikrotik</h3>
-<p>Деактивировать <strong>NAT</strong></p>
+<p><code>numbers_ldp_neighbor</code> - номер соседа</p>
+<h3 id="disable-mpls-ldp-neighbor-mikrotik">disable mpls ldp neighbor mikrotik</h3>
+<p>Деактивировать <strong>MPLS LDP Neighbor</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>ip_firewall_nat</code> - номер фильтра</p>
-<h3 id="set-firewall-nat-mikrotik">set firewall nat mikrotik</h3>
-<p>Изменить конфигурацию <strong>NAT</strong></p>
+<p><code>numbers_ldp_neighbor</code> - номер соседа</p>
+<h3 id="set-mpls-ldp-neighbor-mikrotik">set mpls ldp neighbor mikrotik</h3>
+<p>Изменить параметры <strong>MPLS LDP Neighbor</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>ip_firewall_nat</code> - номер фильтра</p>
+<p><code>numbers_ldp_neighbor</code> - номер соседа</p>
+<p><code>transport_address</code> - Транспортный адрес, используемый удаленным "соседом"</p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>send_targeted</code> - Указывает, отправлять ли целевые сообщения, используемые для целевых (не подключенных напрямую)
+  сеансов LDP. yes/no в кавычках (по умолчанию <code>"yes"</code>)</p>
+<h3 id="set-mpls-settings-mikrotik">set mpls settings mikrotik</h3>
+<ul>
+<li>
+<p>Обязательные параметры</p>
+</li>
+<li>
+<p>Опциональные параметры</p>
+</li>
+</ul>
+<h3 id="set-mpls-ldp-settings-mikrotik">set mpls ldp settings mikrotik</h3>
+<ul>
+<li>
+<p>Обязательные параметры</p>
+</li>
+<li>
+<p>Опциональные параметры</p>
+</li>
+</ul>
 <h2 id="cisco">Cisco</h2>
-<h3 id="role">role</h3>
-<pre><code># TODO
+<pre><code>TODO
 </code></pre>
                 
               

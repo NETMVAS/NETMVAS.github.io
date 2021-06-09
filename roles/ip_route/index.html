@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://NETMVAS.github.io/NETMVAS.github.io/roles/ip_firewall/">
+        <link rel="canonical" href="https://NETMVAS.github.io/NETMVAS.github.io/roles/ip_route/">
       
       <link rel="icon" href="../../icon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
     
     
       
-        <title>IP: Firewall - NETMVAS Documentation</title>
+        <title>IP: Route - NETMVAS Documentation</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ip-firewall" class="md-skip">
+        <a href="#ip-route" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              IP: Firewall
+              IP: Route
             
           </span>
         </div>
@@ -240,95 +240,40 @@
     Mikrotik
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#filter" class="md-nav__link">
-    Filter
-  </a>
-  
-    <nav class="md-nav" aria-label="Filter">
+    <nav class="md-nav" aria-label="Mikrotik">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#add-firewall-filter-mikrotik" class="md-nav__link">
-    add firewall filter mikrotik
+  <a href="#add-ip-static-route-mikrotik" class="md-nav__link">
+    add ip static route mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#remove-firewall-filter-mikrotik" class="md-nav__link">
-    remove firewall filter mikrotik
+  <a href="#remove-ip-static-route-mikrotik" class="md-nav__link">
+    remove ip static route mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#enable-firewall-filter-mikrotik" class="md-nav__link">
-    enable firewall filter mikrotik
+  <a href="#enable-ip-static-route-mikrotik" class="md-nav__link">
+    enable ip static route mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#disable-firewall-filter-mikrotik" class="md-nav__link">
-    disable firewall filter mikrotik
+  <a href="#disable-ip-static-route-mikrotik" class="md-nav__link">
+    disable ip static route mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#set-firewall-filter-mikrotik" class="md-nav__link">
-    set firewall filter mikrotik
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nat" class="md-nav__link">
-    NAT
-  </a>
-  
-    <nav class="md-nav" aria-label="NAT">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-firewall-nat-mikrotik" class="md-nav__link">
-    add firewall nat mikrotik
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remove-firewall-nat-mikrotik" class="md-nav__link">
-    remove firewall nat mikrotik
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enable-firewall-nat-mikrotik" class="md-nav__link">
-    enable firewall nat mikrotik
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#disable-firewall-nat-mikrotik" class="md-nav__link">
-    disable firewall nat mikrotik
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-firewall-nat-mikrotik" class="md-nav__link">
-    set firewall nat mikrotik
+  <a href="#set-ip-static-route-mikrotik" class="md-nav__link">
+    set ip static route mikrotik
   </a>
   
 </li>
@@ -347,8 +292,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#role" class="md-nav__link">
-    role
+  <a href="#add-ip-static-route-cisco" class="md-nav__link">
+    add ip static route cisco
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-ip-static-route-cisco" class="md-nav__link">
+    remove ip static route cisco
   </a>
   
 </li>
@@ -371,97 +323,98 @@
               
                 
                 
-                <h1 id="ip-firewall">IP: Firewall</h1>
+                <h1 id="ip-route">IP: Route</h1>
 <h2 id="mikrotik">Mikrotik</h2>
-<h2 id="filter">Filter</h2>
-<h3 id="add-firewall-filter-mikrotik">add firewall filter mikrotik</h3>
-<p>Добавить правило <strong>Firewall</strong></p>
+<h3 id="add-ip-static-route-mikrotik">add ip static route mikrotik</h3>
+<p>Добавить <strong>Static Route</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>dst_address</code> - Сопоставляет пакеты, пункт назначения которых равен указанному IP или попадает в указанный диапазон IP</p>
-<p><code>dst_port</code> - Список номеров портов назначения или диапазонов номеров портов</p>
-<p><code>src_address</code> - Сопоставляет пакеты, источник которых равен указанному IP или попадает в указанный диапазон IP.</p>
-<p><code>src_port</code> - Список портов источника и диапазонов портов источника. Применяется, только если протокол TCP или UDP.</p>
-<p><code>firewall_action</code> - действие для правила (например <code>accept</code>)</p>
-<p><code>chain</code> - Указывает, к какой цепочке будет добавлено правило. Если входные данные не совпадают с именем уже
-  определенной цепи, будет создана новая цепь</p>
-<p><code>protocol</code> - Сопоставляет определенный IP-протокол, указанный именем или номером протокола</p>
-<h3 id="remove-firewall-filter-mikrotik">remove firewall filter mikrotik</h3>
-<p>Удалить правило <strong>Firewall</strong></p>
+<p><code>address</code> - IP-префикс маршрута, определяет адреса назначения, для которых может быть использован данный маршрут.
+  Часть Netmask этого свойства определяет, сколько наиболее значимых битов в адресе назначения пакета должно совпадать с
+  этим значением. Если существует несколько активных маршрутов, соответствующих адресу назначения пакета, то
+  используется наиболее специфичный маршрут (с наибольшим значением netmask).</p>
+<p><code>gateway</code> - Массив IP-адресов или имен интерфейсов. Указывает, на какой хост или интерфейс должны быть отправлены
+  пакеты. Подключенные маршруты и маршруты с типом blackhole, unreachable или prohibit не имеют этого свойства. Обычно
+  значением этого свойства является один IP-адрес шлюза, до которого можно напрямую добраться через один из интерфейсов
+  маршрутизатора (но см. nexthop lookup). Маршруты ECMP имеют более одного значения шлюза. Значение может повторяться
+  несколько раз.</p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>distance</code> - Значение, используемое при выборе маршрута. Маршрутам с меньшим значением расстояния отдается
+  предпочтение.
+  (по умолчанию <code>1</code>)</p>
+<p><code>check_gateway</code> - Периодически (каждые 10 секунд) проверяйте шлюз, отправляя либо эхо-запрос ICMP (ping), либо
+  ARP-запрос (arp). Если в течение 10 секунд от шлюза не получен ответ, запрос завершается. После двух таймаутов шлюз
+  считается недоступным. После получения ответа от шлюза он считается достижимым и счетчик таймаута сбрасывается (по
+  умолчанию <code>ping</code>)</p>
+<h3 id="remove-ip-static-route-mikrotik">remove ip static route mikrotik</h3>
+<p>Удалить <strong>Static Route</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>ip_firewall_filter</code> - номер фильтра</p>
-<h3 id="enable-firewall-filter-mikrotik">enable firewall filter mikrotik</h3>
-<p>Активировать правило <strong>Firewall</strong></p>
+<p><code>numbers_route</code> - номер Static Route</p>
+<h3 id="enable-ip-static-route-mikrotik">enable ip static route mikrotik</h3>
+<p>Активировать <strong>Static Route</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>ip_firewall_filter</code> - номер фильтра</p>
-<h3 id="disable-firewall-filter-mikrotik">disable firewall filter mikrotik</h3>
-<p>Деактивировать правило <strong>Firewall</strong></p>
+<p><code>numbers_route</code> - номер Static Route</p>
+<h3 id="disable-ip-static-route-mikrotik">disable ip static route mikrotik</h3>
+<p>Деактивировать <strong>Static Route</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>ip_firewall_filter</code> - номер фильтра</p>
-<h3 id="set-firewall-filter-mikrotik">set firewall filter mikrotik</h3>
-<p>Изменить конфигурацию правила <strong>Firewall</strong></p>
+<p><code>numbers_route</code> - номер Static Route</p>
+<h3 id="set-ip-static-route-mikrotik">set ip static route mikrotik</h3>
+<p>Изменить конфигурацию <strong>Static Route</strong></p>
 <ul>
 <li>Обязательные параметры</li>
 </ul>
-<p><code>ip_firewall_filter</code> - номер фильтра</p>
-<p><code>dst_address</code> - Сопоставляет пакеты, пункт назначения которых равен указанному IP или попадает в указанный диапазон IP</p>
-<p><code>dst_port</code> - Список номеров портов назначения или диапазонов номеров портов</p>
-<p><code>src_address</code> - Сопоставляет пакеты, источник которых равен указанному IP или попадает в указанный диапазон IP.</p>
-<p><code>src_port</code> - Список портов источника и диапазонов портов источника. Применяется, только если протокол TCP или UDP.</p>
-<p><code>firewall_action</code> - действие для правила (например <code>accept</code>)</p>
-<p><code>chain</code> - Указывает, к какой цепочке будет добавлено правило. Если входные данные не совпадают с именем уже
-  определенной цепи, будет создана новая цепь</p>
-<p><code>protocol</code> - Сопоставляет определенный IP-протокол, указанный именем или номером протокола</p>
-<h2 id="nat">NAT</h2>
-<h3 id="add-firewall-nat-mikrotik">add firewall nat mikrotik</h3>
-<p>Добавить <strong>NAT</strong></p>
+<p><code>numbers_route</code> - номер Static Route</p>
+<p><code>address</code> - IP-префикс маршрута, определяет адреса назначения, для которых может быть использован данный маршрут.
+  Часть Netmask этого свойства определяет, сколько наиболее значимых битов в адресе назначения пакета должно совпадать с
+  этим значением. Если существует несколько активных маршрутов, соответствующих адресу назначения пакета, то
+  используется наиболее специфичный маршрут (с наибольшим значением netmask).</p>
+<p><code>gateway</code> - Массив IP-адресов или имен интерфейсов. Указывает, на какой хост или интерфейс должны быть отправлены
+  пакеты. Подключенные маршруты и маршруты с типом blackhole, unreachable или prohibit не имеют этого свойства. Обычно
+  значением этого свойства является один IP-адрес шлюза, до которого можно напрямую добраться через один из интерфейсов
+  маршрутизатора (но см. nexthop lookup). Маршруты ECMP имеют более одного значения шлюза. Значение может повторяться
+  несколько раз.</p>
 <ul>
-<li>Обязательные параметры</li>
+<li>Опциональные параметры</li>
 </ul>
-<p><code>dst_address</code> - Сопоставляет пакеты, пункт назначения которых равен указанному IP или попадает в указанный диапазон IP</p>
-<p><code>dst_port</code> - Список номеров портов назначения или диапазонов номеров портов</p>
-<p><code>src_address</code> - Сопоставляет пакеты, источник которых равен указанному IP или попадает в указанный диапазон IP.</p>
-<p><code>src_port</code> - Список портов источника и диапазонов портов источника. Применяется, только если протокол TCP или UDP.</p>
-<p><code>firewall_action</code> - действие для правила (например <code>accept</code>)</p>
-<p><code>chain</code> - Указывает, к какой цепочке будет добавлено правило. Если входные данные не совпадают с именем уже
-  определенной цепи, будет создана новая цепь</p>
-<p><code>out_interface</code> - Интерфейс, через который пакет покидает маршрутизатор</p>
-<p><code>protocol</code> - Сопоставляет определенный IP-протокол, указанный именем или номером протокола</p>
-<h3 id="remove-firewall-nat-mikrotik">remove firewall nat mikrotik</h3>
-<p>Удалить <strong>NAT</strong></p>
-<ul>
-<li>Обязательные параметры</li>
-</ul>
-<p><code>ip_firewall_nat</code> - номер фильтра</p>
-<h3 id="enable-firewall-nat-mikrotik">enable firewall nat mikrotik</h3>
-<p>Активировать <strong>NAT</strong></p>
-<ul>
-<li>Обязательные параметры</li>
-</ul>
-<p><code>ip_firewall_nat</code> - номер фильтра</p>
-<h3 id="disable-firewall-nat-mikrotik">disable firewall nat mikrotik</h3>
-<p>Деактивировать <strong>NAT</strong></p>
-<ul>
-<li>Обязательные параметры</li>
-</ul>
-<p><code>ip_firewall_nat</code> - номер фильтра</p>
-<h3 id="set-firewall-nat-mikrotik">set firewall nat mikrotik</h3>
-<p>Изменить конфигурацию <strong>NAT</strong></p>
-<ul>
-<li>Обязательные параметры</li>
-</ul>
-<p><code>ip_firewall_nat</code> - номер фильтра</p>
+<p><code>distance</code> - Значение, используемое при выборе маршрута. Маршрутам с меньшим значением расстояния отдается
+  предпочтение.
+  (по умолчанию <code>1</code>)</p>
+<p><code>check_gateway</code> - Периодически (каждые 10 секунд) проверяйте шлюз, отправляя либо эхо-запрос ICMP (ping), либо
+  ARP-запрос (arp). Если в течение 10 секунд от шлюза не получен ответ, запрос завершается. После двух таймаутов шлюз
+  считается недоступным. После получения ответа от шлюза он считается достижимым и счетчик таймаута сбрасывается (по
+  умолчанию <code>ping</code>)</p>
 <h2 id="cisco">Cisco</h2>
-<h3 id="role">role</h3>
-<pre><code># TODO
-</code></pre>
+<h3 id="add-ip-static-route-cisco">add ip static route cisco</h3>
+<p>Создать route</p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>address</code> - IP-префикс маршрута, определяет адреса назначения, для которых может быть использован данный маршрут.
+  Часть Netmask этого свойства определяет, сколько наиболее значимых битов в адресе назначения пакета должно совпадать с
+  этим значением. Если существует несколько активных маршрутов, соответствующих адресу назначения пакета, то
+  используется наиболее специфичный маршрут (с наибольшим значением netmask).</p>
+<p><code>mask</code> - маска</p>
+<p><code>gateway</code> - next hop</p>
+<h3 id="remove-ip-static-route-cisco">remove ip static route cisco</h3>
+<p>Удалить route</p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>address</code> - IP-префикс маршрута, определяет адреса назначения, для которых может быть использован данный маршрут.
+  Часть Netmask этого свойства определяет, сколько наиболее значимых битов в адресе назначения пакета должно совпадать с
+  этим значением. Если существует несколько активных маршрутов, соответствующих адресу назначения пакета, то
+  используется наиболее специфичный маршрут (с наибольшим значением netmask).</p>
+<p><code>mask</code> - маска</p>
+<p><code>gateway</code> - next hop</p>
                 
               
               
