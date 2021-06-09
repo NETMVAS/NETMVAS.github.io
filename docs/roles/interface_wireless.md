@@ -30,7 +30,7 @@
 
     `ssid` - SSID сети
 
-    `mode` - #TODO
+    `mode` - [режим работы](https://wiki.mikrotik.com/wiki/Manual:Wireless_Station_Modes) (на выбор alignment-only; ap-bridge; bridge; nstreme-dual-slave; station)
 
     `security_profile` - #TODO
 
@@ -44,7 +44,7 @@
 
     `security_profile` - название профиля
 
-    `mode` - 
+    `mode` - [режим работы](https://wiki.mikrotik.com/wiki/Manual:Wireless_Station_Modes) (на выбор alignment-only; ap-bridge; bridge; nstreme-dual-slave; station)
 
     `password` - Пароль
 
@@ -70,7 +70,7 @@
 
     `rename_security_profile` - новое название профиля безопасности
 
-    `mode` - #TODO
+    `mode` - [режим работы](https://wiki.mikrotik.com/wiki/Manual:Wireless_Station_Modes) (на выбор alignment-only; ap-bridge; bridge; nstreme-dual-slave; station)
 
     `password` - Пароль
 
