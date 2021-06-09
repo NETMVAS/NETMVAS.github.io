@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://NETMVAS.github.io/NETMVAS.github.io/roles/interface_wireless/">
+        <link rel="canonical" href="https://NETMVAS.github.io/NETMVAS.github.io/roles/ip_address_interface/">
       
       <link rel="icon" href="../../icon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
     
     
       
-        <title>Interface: Wireless - NETMVAS Documentation</title>
+        <title>IP Address: Interface - NETMVAS Documentation</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#interface-wireless" class="md-skip">
+        <a href="#ip-address-interface" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Interface: Wireless
+              IP Address: Interface
             
           </span>
         </div>
@@ -244,43 +244,36 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#enable-wireless-interface-mikrotik" class="md-nav__link">
-    enable wireless interface mikrotik
+  <a href="#add-ip_address-interface-mikrotik" class="md-nav__link">
+    add ip_address interface mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#disable-wireless-interface-mikrotik" class="md-nav__link">
-    disable wireless interface mikrotik
+  <a href="#remove-ip_address-interface-mikrotik" class="md-nav__link">
+    remove ip_address interface mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#set-wireless-interface-mikrotik" class="md-nav__link">
-    set wireless interface mikrotik
+  <a href="#enable-ip_address-interface-mikrotik" class="md-nav__link">
+    enable ip_address interface mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#add-wireless-security-profile-mikrotik" class="md-nav__link">
-    add wireless security profile mikrotik
+  <a href="#disable-ip_address-interface-mikrotik" class="md-nav__link">
+    disable ip_address interface mikrotik
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#remove-wireless-security-profile-mikrotik" class="md-nav__link">
-    remove wireless security profile mikrotik
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-wireless-security-profile-mikrotik" class="md-nav__link">
-    set wireless security profile mikrotik
+  <a href="#set-ip_address-interface-mikrotik" class="md-nav__link">
+    set ip_address interface mikrotik
   </a>
   
 </li>
@@ -299,8 +292,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#role" class="md-nav__link">
-    role
+  <a href="#add-ip_address-interface-cisco" class="md-nav__link">
+    add ip_address interface cisco
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-ip_address-interface-cisco" class="md-nav__link">
+    remove ip_address interface cisco
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-ip_address-interface-cisco" class="md-nav__link">
+    set ip_address interface cisco
   </a>
   
 </li>
@@ -323,84 +330,62 @@
               
                 
                 
-                <h1 id="interface-wireless">Interface: Wireless</h1>
-<p>Роли для настройки Wireless интерфейсов</p>
+                <h1 id="ip-address-interface">IP Address: Interface</h1>
 <h2 id="mikrotik">Mikrotik</h2>
-<h3 id="enable-wireless-interface-mikrotik">enable wireless interface mikrotik</h3>
-<p>Активировать заданный <strong>Wireless</strong> интерфейс </p>
+<h3 id="add-ip_address-interface-mikrotik">add ip_address interface mikrotik</h3>
+<p>Создать интерфейс <strong>ip address</strong></p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-<p><code>wireless_interface</code> - название Wireless интерфейса</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
-<h3 id="disable-wireless-interface-mikrotik">disable wireless interface mikrotik</h3>
-<p>Деактивировать заданный <strong>Wireless</strong> интерфейс </p>
+<p><code>interface</code> - интерфейс (например <code>wlan1</code>)</p>
+<p><code>address</code> - IP-адрес (например <code>192.168.88.1\24</code>)</p>
+<h3 id="remove-ip_address-interface-mikrotik">remove ip_address interface mikrotik</h3>
+<p>Удалить интерфейс <strong>ip address</strong></p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-<p><code>wireless_interface</code> - название Wireless интерфейса</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
-<h3 id="set-wireless-interface-mikrotik">set wireless interface mikrotik</h3>
-<p>Изменить конфигурацию заданного <strong>Wireless</strong> интерфейса </p>
+<p><code>numbers_ip_address</code> - номер интерфейса который нужно удалить</p>
+<h3 id="enable-ip_address-interface-mikrotik">enable ip_address interface mikrotik</h3>
+<p>Активировать интерфейс <strong>ip address</strong></p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-<p><code>wireless_interface</code> - название Wireless интерфейса</p>
-<p><code>ssid</code> - SSID сети</p>
-<p><code>mode</code> - <a href="https://wiki.mikrotik.com/wiki/Manual:Wireless_Station_Modes">режим работы</a> (на выбор alignment-only; ap-bridge; bridge; nstreme-dual-slave; station)</p>
-<p><code>security_profile</code> - #TODO</p>
-<p><code>hide_ssid</code> - Скрыть SSID? yes/no в кавычках (например <code>"yes"</code>)</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
-<h3 id="add-wireless-security-profile-mikrotik">add wireless security profile mikrotik</h3>
-<p>Добавить профиль безопасности <strong>Wireless</strong> интерфейса</p>
+<p><code>numbers_ip_address</code> - номер интерфейса который нужно активировать</p>
+<h3 id="disable-ip_address-interface-mikrotik">disable ip_address interface mikrotik</h3>
+<p>Деаткивировать интерфейс <strong>ip address</strong></p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-<p><code>security_profile</code> - название профиля</p>
-<p><code>mode</code> - <a href="https://wiki.mikrotik.com/wiki/Manual:Wireless_Station_Modes">режим работы</a> (на выбор alignment-only; ap-bridge; bridge; nstreme-dual-slave; station)</p>
-<p><code>password</code> - Пароль</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-<p><code>auth_types</code> - тип авторизации (по умолчанию <code>wpa2-psk</code>)</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
-<h3 id="remove-wireless-security-profile-mikrotik">remove wireless security profile mikrotik</h3>
-<p>Удалить указанную конфигурацию профиля безопасности <strong>Wireless</strong> интерфейса</p>
+<p><code>numbers_ip_address</code> - номер интерфейса который нужно деактивировать</p>
+<h3 id="set-ip_address-interface-mikrotik">set ip_address interface mikrotik</h3>
+<p>Изменить конфигурацию интерфейса <strong>ip address</strong></p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-<p><code>security_profile</code> - название профиля безопасности</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
-<h3 id="set-wireless-security-profile-mikrotik">set wireless security profile mikrotik</h3>
-<p>Изменить конфигурацию профиля безопасности <strong>Wireless</strong> интерфейса</p>
-<ul>
-<li>
-<p>Обязательные параметры</p>
-<p><code>security_profile</code> - название профиля безопасности</p>
-<p><code>rename_security_profile</code> - новое название профиля безопасности</p>
-<p><code>mode</code> - <a href="https://wiki.mikrotik.com/wiki/Manual:Wireless_Station_Modes">режим работы</a> (на выбор alignment-only; ap-bridge; bridge; nstreme-dual-slave; station)</p>
-<p><code>password</code> - Пароль</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-<p><code>auth_types</code> - тип авторизации (по умолчанию <code>wpa2-psk</code>)</p>
-</li>
-</ul>
+<p><code>numbers_ip_address</code> - номер интерфейса который нужно удалить</p>
+<p><code>interface</code> - интерфейс (например <code>wlan1</code>)</p>
+<p><code>address</code> - IP-адрес (например <code>192.168.88.1\24</code>)</p>
 <h2 id="cisco">Cisco</h2>
-<h3 id="role">role</h3>
+<h3 id="add-ip_address-interface-cisco">add ip_address interface cisco</h3>
+<p>Создать интерфейс <strong>ip address</strong></p>
 <ul>
-<li>
-<p>Обязательные параметры</p>
-</li>
-<li>
-<p>Опциональные параметры</p>
-</li>
+<li>Обязательные параметры</li>
 </ul>
+<p><code>interface</code> - название интерфейса (например <code>Gig0/2</code>)</p>
+<p><code>address</code> - IP-адрес (например <code>192.168.88.1\24</code>)</p>
+<h3 id="remove-ip_address-interface-cisco">remove ip_address interface cisco</h3>
+<p>Удалить интерфейс <strong>ip address</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>interface</code> - название интерфейса (например <code>Gig0/2</code>)</p>
+<h3 id="set-ip_address-interface-cisco">set ip_address interface cisco</h3>
+<p>Изменить конфигурацию интерфейса <strong>ip address</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>interface</code> - название интерфейса (например <code>Gig0/2</code>)</p>
+<p><code>address</code> - IP-адрес (например <code>192.168.88.1\24</code>)</p>
                 
               
               
