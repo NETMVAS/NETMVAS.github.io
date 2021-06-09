@@ -36,7 +36,7 @@
 |[config_interface_wireless](interface_wireless)|Настройка интерфейса: Wireless|RouterOS: 100%, IOS: 0%|
 |[config_ip_address_interface](ip_address_interface)|Настройка IP: Address interface  |RouterOS: 100%, IOS: 100%|
 |[config_ip_firewall](ip_firewall)|Настройка IP: Firewall|RouterOS: 100%, IOS: 100%|
-|config_ip_route|Настройка IP: Route|RouterOS: 100%, IOS: 100%|
+|[config_ip_route](ip_route)|Настройка IP: Route|RouterOS: 100%, IOS: 100%|
 |config_mpls|Настройка IP: MPLS|RouterOS: 100%, IOS: 100%|
 |config_ntp_client|Настройка IP: NTP-клиент|RouterOS: 100%, IOS: 100%|
 |config_routing_bgp|Настройка Routing: BGP|RouterOS: 100%, IOS: 100%|
