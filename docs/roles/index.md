@@ -38,7 +38,7 @@
 |[config_ip_firewall](ip_firewall)|Настройка IP: Firewall|RouterOS: 100%, IOS: 100%|
 |[config_ip_route](ip_route)|Настройка IP: Route|RouterOS: 100%, IOS: 100%|
 |[config_mpls](mpls)|Настройка IP: MPLS|RouterOS: 100%, IOS: 100%|
-|config_ntp_client|Настройка IP: NTP-клиент|RouterOS: 100%, IOS: 100%|
+|[config_ntp_client](ntp_client)|Настройка IP: NTP-клиент|RouterOS: 100%, IOS: 100%|
 |config_routing_bgp|Настройка Routing: BGP|RouterOS: 100%, IOS: 100%|
 |config_routing_ospf|Настройка Routing: OSPF|RouterOS: 100%, IOS: 100%|
 |config_subinterface|Настройка Subinterface           |RouterOS: 100%, IOS: 100%|
