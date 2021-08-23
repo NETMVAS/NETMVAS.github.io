@@ -4,8 +4,13 @@ site_url: https://NETMVAS.github.io/NETMVAS.github.io
 
 nav:
     - Главная: index.md
-    - Установка: setup.md
-    - Роли: roles/index.md
+    - Multivendor Ansible:
+        - Главная: multivendor_ansible/index.md
+        - Roles: multivendor_ansible/roles/index.md
+    - Feecc:
+        - Главная: feecc/index.md
+        - Spoke: feecc/spoke.md
+        - Hub: feecc/hub.md
 
 theme:
   name: material
@@ -14,3 +19,6 @@ theme:
     primary: white
   logo: icon.png
   favicon: icon.png
+
+markdown_extensions:
+  - attr_list
