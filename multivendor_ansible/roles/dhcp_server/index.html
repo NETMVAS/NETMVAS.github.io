@@ -9,19 +9,21 @@
       
       
       
-      <link rel="icon" href="/NETMVAS.github.io/icon.png">
+        <link rel="canonical" href="https://NETMVAS.github.io/NETMVAS.github.io/multivendor_ansible/roles/dhcp_server/">
+      
+      <link rel="icon" href="../../../icon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
     
     
       
-        <title>NETMVAS Documentation</title>
+        <title>DHCP Server - NETMVAS Documentation</title>
       
     
     
-      <link rel="stylesheet" href="/NETMVAS.github.io/assets/stylesheets/main.875de78c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.875de78c.min.css">
       
         
-        <link rel="stylesheet" href="/NETMVAS.github.io/assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
         
           
           
@@ -55,12 +57,17 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("/NETMVAS.github.io",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#dhcp-server" class="md-skip">
+          Перейти к содержанию
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -69,9 +76,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/NETMVAS.github.io/." title="NETMVAS Documentation" class="md-header__button md-logo" aria-label="NETMVAS Documentation" data-md-component="logo">
+    <a href="../../.." title="NETMVAS Documentation" class="md-header__button md-logo" aria-label="NETMVAS Documentation" data-md-component="logo">
       
-  <img src="/NETMVAS.github.io/icon.png" alt="logo">
+  <img src="../../../icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -87,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              DHCP Server
             
           </span>
         </div>
@@ -148,9 +155,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/NETMVAS.github.io/." title="NETMVAS Documentation" class="md-nav__button md-logo" aria-label="NETMVAS Documentation" data-md-component="logo">
+    <a href="../../.." title="NETMVAS Documentation" class="md-nav__button md-logo" aria-label="NETMVAS Documentation" data-md-component="logo">
       
-  <img src="/NETMVAS.github.io/icon.png" alt="logo">
+  <img src="../../../icon.png" alt="logo">
 
     </a>
     NETMVAS Documentation
@@ -166,7 +173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/NETMVAS.github.io/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Главная
       </a>
     </li>
@@ -202,7 +209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/NETMVAS.github.io/multivendor_ansible/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         Главная
       </a>
     </li>
@@ -214,7 +221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/NETMVAS.github.io/multivendor_ansible/roles/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Roles
       </a>
     </li>
@@ -256,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/NETMVAS.github.io/feecc/" class="md-nav__link">
+      <a href="../../../feecc/" class="md-nav__link">
         Главная
       </a>
     </li>
@@ -268,7 +275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/NETMVAS.github.io/feecc/spoke/" class="md-nav__link">
+      <a href="../../../feecc/spoke/" class="md-nav__link">
         Spoke
       </a>
     </li>
@@ -280,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/NETMVAS.github.io/feecc/hub/" class="md-nav__link">
+      <a href="../../../feecc/hub/" class="md-nav__link">
         Hub
       </a>
     </li>
@@ -300,11 +307,166 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mikrotik" class="md-nav__link">
+    Mikrotik
+  </a>
+  
+    <nav class="md-nav" aria-label="Mikrotik">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-dhcp_server-mikrotik" class="md-nav__link">
+    add dhcp_server mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-dhcp_server-mikrotik" class="md-nav__link">
+    remove dhcp_server mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-dhcp_server-mikrotik" class="md-nav__link">
+    enable dhcp_server mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-dhcp_server-mikrotik" class="md-nav__link">
+    disable dhcp_server mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-dhcp_server-mikrotik" class="md-nav__link">
+    set dhcp_server mikrotik
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cisco" class="md-nav__link">
+    Cisco
+  </a>
+  
+    <nav class="md-nav" aria-label="Cisco">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config-ipaddress-interface-cisco" class="md-nav__link">
+    config ipaddress interface cisco
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                
+                <h1 id="dhcp-server">DHCP Server</h1>
+<p>Роли для управления <strong>DHCP</strong> Сервером</p>
+<h2 id="mikrotik">Mikrotik</h2>
+<h3 id="add-dhcp_server-mikrotik">add dhcp_server mikrotik</h3>
+<p>Создание <strong>DHCP</strong> Сервера на интерфейсе</p>
+<ul>
+<li>
+<p>Обязательные параметры</p>
+<p><code>dhcp_server</code> - название DHCP Сервера (например <code>DHCP_SERVER1</code>)</p>
+<p><code>interface</code> - название интерфейса на который привязать сервер (например <code>ether1</code>)</p>
+<p><code>address_pool</code> - название пула IP-адресов (например <code>dhcp_pool1</code>)</p>
+</li>
+</ul>
+<h3 id="remove-dhcp_server-mikrotik">remove dhcp_server mikrotik</h3>
+<p>Удаление <strong>DHCP</strong> Сервера </p>
+<ul>
+<li>
+<p>Обязательные параметры</p>
+<p><code>dhcp_server</code> - название DHCP-сервера</p>
+</li>
+</ul>
+<h3 id="enable-dhcp_server-mikrotik">enable dhcp_server mikrotik</h3>
+<p>Активация <strong>DHCP</strong> Сервера </p>
+<ul>
+<li>
+<p>Обязательные параметры</p>
+<p><code>dhcp_server</code> - название DHCP-сервера</p>
+</li>
+</ul>
+<h3 id="disable-dhcp_server-mikrotik">disable dhcp_server mikrotik</h3>
+<p>Деактивация <strong>DHCP</strong> Сервера</p>
+<ul>
+<li>
+<p>Обязательные параметры</p>
+<p><code>dhcp_server</code> - название DHCP-сервера</p>
+</li>
+</ul>
+<h3 id="set-dhcp_server-mikrotik">set dhcp_server mikrotik</h3>
+<p>Редактирование параметров <strong>DHCP</strong> Сервера</p>
+<ul>
+<li>
+<p>Обязательные параметры</p>
+<p><code>dhcp_server</code> - название DHCP-сервера</p>
+<p><code>interface</code> - название интерфейса на который привязать сервер (например <code>ether1</code>)</p>
+<p><code>address_pool</code> - название пула IP-адресов (например <code>dhcp_pool1</code>)</p>
+<p><code>rename_dhcp_server</code> - новое название DHCP Сервера</p>
+</li>
+</ul>
+<h2 id="cisco">Cisco</h2>
+<h3 id="config-ipaddress-interface-cisco">config ipaddress interface cisco</h3>
+<ul>
+<li>
+<p>Обязательные параметры</p>
+<p><code>local_hostname</code> - local hostname</p>
+</li>
+</ul>
+                
+              
+              
+                
+
 
               
             </article>
@@ -335,10 +497,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/NETMVAS.github.io", "features": [], "translations": {"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "/NETMVAS.github.io/assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
     
     
-      <script src="/NETMVAS.github.io/assets/javascripts/bundle.34eae1b6.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.34eae1b6.min.js"></script>
       
     
   </body>

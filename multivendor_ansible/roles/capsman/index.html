@@ -1,0 +1,889 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="canonical" href="https://NETMVAS.github.io/NETMVAS.github.io/multivendor_ansible/roles/capsman/">
+      
+      <link rel="icon" href="../../../icon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.6">
+    
+    
+      
+        <title>CAPsMAN - NETMVAS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.875de78c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#capsman" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="NETMVAS Documentation" class="md-header__button md-logo" aria-label="NETMVAS Documentation" data-md-component="logo">
+      
+  <img src="../../../icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NETMVAS Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CAPsMAN
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="NETMVAS Documentation" class="md-nav__button md-logo" aria-label="NETMVAS Documentation" data-md-component="logo">
+      
+  <img src="../../../icon.png" alt="logo">
+
+    </a>
+    NETMVAS Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Главная
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Multivendor Ansible
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Multivendor Ansible" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Multivendor Ansible
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Главная
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Roles
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Feecc
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Feecc" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Feecc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../feecc/" class="md-nav__link">
+        Главная
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../feecc/spoke/" class="md-nav__link">
+        Spoke
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../feecc/hub/" class="md-nav__link">
+        Hub
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mikrotik" class="md-nav__link">
+    Mikrotik
+  </a>
+  
+    <nav class="md-nav" aria-label="Mikrotik">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-cap-interface-mikrotik" class="md-nav__link">
+    add cap interface mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-cap-interface-mikrotik" class="md-nav__link">
+    remove cap interface mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-cap-interface-mikrotik" class="md-nav__link">
+    enable cap interface mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-cap-interface-mikrotik" class="md-nav__link">
+    disable cap interface mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-cap-interface-mikrotik" class="md-nav__link">
+    set cap interface mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-caps-provisioning-mikrotik" class="md-nav__link">
+    add caps provisioning mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-caps-provisioning-mikrotik" class="md-nav__link">
+    remove caps provisioning mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-caps-provisioning-mikrotik" class="md-nav__link">
+    enable caps provisioning mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-caps-provisioning-mikrotik" class="md-nav__link">
+    disable caps provisioning mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-caps-provisioning-mikrotik" class="md-nav__link">
+    set caps provisioning mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-caps-configuration-mikrotik" class="md-nav__link">
+    add caps configuration mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-caps-configuration-mikrotik" class="md-nav__link">
+    remove caps configuration mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-caps-configuration-mikrotik" class="md-nav__link">
+    set caps configuration mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-caps-channel-mikrotik" class="md-nav__link">
+    add caps channel mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-caps-channel-mikrotik" class="md-nav__link">
+    remove caps channel mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-caps-channel-mikrotik" class="md-nav__link">
+    set caps channel mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-caps-datapath-mikrotik" class="md-nav__link">
+    add caps datapath mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-caps-datapath-mikrotik" class="md-nav__link">
+    remove caps datapath mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-caps-datapath-mikrotik" class="md-nav__link">
+    set caps datapath mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-caps-security-cfg-mikrotik" class="md-nav__link">
+    add caps security cfg mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-caps-security-cfg-mikrotik" class="md-nav__link">
+    remove caps security cfg mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-caps-security-cfg-mikrotik" class="md-nav__link">
+    set caps security cfg mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-caps-access-rule-mikrotik" class="md-nav__link">
+    add caps access rule mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-caps-access-rule-mikrotik" class="md-nav__link">
+    remove caps access rule mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-caps-access-rule-mikrotik" class="md-nav__link">
+    enable caps access rule mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-caps-access-rule-mikrotik" class="md-nav__link">
+    disable caps access rule mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-caps-access-rule-mikrotik" class="md-nav__link">
+    set caps access rule mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-caps-rate-mikrotik" class="md-nav__link">
+    add caps rate mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-caps-rate-mikrotik" class="md-nav__link">
+    remove caps rate mikrotik
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-caps-rate-mikrotik" class="md-nav__link">
+    set caps rate mikrotik
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cisco" class="md-nav__link">
+    Cisco
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="capsman">CAPsMAN</h1>
+<p>Роли, настраивающие <strong>CAPsMAN</strong></p>
+<h2 id="mikrotik">Mikrotik</h2>
+<h3 id="add-cap-interface-mikrotik">add cap interface mikrotik</h3>
+<p>Добавить CAPsMAN</p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>cap_interface</code> - название интерфейса</p>
+<p><code>mtu</code> - размер MTU (например <code>1500</code>)</p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>arp</code> - enabled/disabled (по умолчанию <code>enabled</code>)</p>
+<h3 id="remove-cap-interface-mikrotik">remove cap interface mikrotik</h3>
+<p>Удаление CAP</p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_cap_interface</code> - номер порта (0-999)</p>
+<h3 id="enable-cap-interface-mikrotik">enable cap interface mikrotik</h3>
+<p>Активация CAP</p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_cap_interface</code> - номер порта (0-999)</p>
+<h3 id="disable-cap-interface-mikrotik">disable cap interface mikrotik</h3>
+<p>Деактивация CAP</p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_cap_interface</code> - номер порта (0-999)</p>
+<h3 id="set-cap-interface-mikrotik">set cap interface mikrotik</h3>
+<p>Изменение параметров CAP</p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_cap_interface</code> - номер порта (0-999)</p>
+<p><code>cap_interface</code> - название интерфейса</p>
+<p><code>mtu</code> - размер MTU (например <code>1500</code>)</p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>arp</code> - enabled/disabled (по умолчанию <code>enabled</code>)</p>
+<h3 id="add-caps-provisioning-mikrotik">add caps provisioning mikrotik</h3>
+<p>Добавить <strong>CAPS provisioning</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>rad_mac</code> - MAC-адрес беспроводного модуля</p>
+<p><code>mcfg_name</code> - какую конфигурацию CAPsMAN привязать к provisioning</p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>action</code> - действие, на выбор: create-disabled, create-dynamic-enabled, create-enabled, none (по умолчанию <code>none</code>)</p>
+<p><code>name_format</code> - на выбор: name_formatcap, identity, prefix, prefix-identity (по умолчанию <code>cap</code>)</p>
+<h3 id="remove-caps-provisioning-mikrotik">remove caps provisioning mikrotik</h3>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_provisioning</code> - номер порта (0-999)</p>
+<h3 id="enable-caps-provisioning-mikrotik">enable caps provisioning mikrotik</h3>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_provisioning</code> - номер порта (0-999)</p>
+<h3 id="disable-caps-provisioning-mikrotik">disable caps provisioning mikrotik</h3>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_provisioning</code> - номер порта (0-999)</p>
+<h3 id="set-caps-provisioning-mikrotik">set caps provisioning mikrotik</h3>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_provisioning</code> - номер порта (0-999)</p>
+<p><code>rad_mac</code> - MAC-адрес беспроводного модуля</p>
+<p><code>mcfg_name</code> - какую конфигурацию CAPsMAN привязать к provisioning</p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>action</code> - действие, на выбор: create-disabled, create-dynamic-enabled, create-enabled, none (по умолчанию <code>none</code>)</p>
+<p><code>name_format</code> - на выбор: name_formatcap, identity, prefix, prefix-identity (по умолчанию <code>cap</code>)</p>
+<h3 id="add-caps-configuration-mikrotik">add caps configuration mikrotik</h3>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>cfg_name</code> - название конфигурации</p>
+<p><code>ssid</code> - название сети</p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>mode</code> - режим (по умолчанию <code>ap</code>)</p>
+<p><code>hide_ssid</code> - ssid скрыт? (по умолчанию <code>no</code>)</p>
+<p><code>distance</code> - на выбор: indoors, dynamic (по умолчанию <code>indoors</code>)</p>
+<h3 id="remove-caps-configuration-mikrotik">remove caps configuration mikrotik</h3>
+<p>Удалить конфигурацию <strong>CAPsMAN</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_configuration</code> - номер порта (0-999)</p>
+<h3 id="set-caps-configuration-mikrotik">set caps configuration mikrotik</h3>
+<p>Изменить конфигурацию <strong>CAPsMAN</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_configuration</code> - номер порта (0-999)</p>
+<p><code>cfg_name</code> - название конфигурации</p>
+<p><code>ssid</code> - название сети</p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>mode</code> - режим (по умолчанию <code>ap</code>)</p>
+<p><code>hide_ssid</code> - ssid скрыт? (по умолчанию <code>no</code>)</p>
+<p><code>distance</code> - на выбор: indoors, dynamic (по умолчанию <code>indoors</code>)</p>
+<h3 id="add-caps-channel-mikrotik">add caps channel mikrotik</h3>
+<p>Добавить канал <strong>CAPsMAN</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>channel_name</code> - название канала</p>
+<p><code>frequency</code> - частота (от 0 до 4294967.29)</p>
+<p><code>secondary_frequency</code> - вторичная частота (от 0 до 4294967.29)</p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>band</code> - канал. на выбор: 2ghz-b | 2ghz-b/g | 2ghz-b/g/n | 2ghz-onlyg | 2ghz-onlyn | 5ghz-a | 5ghz-a/n | 5ghz-onlyn |
+  5ghz-a/n/ac | 5ghz-only-ac (по умолчанию <code>2ghz-b</code>)</p>
+<p><code>tx_power</code> - от -30 до 40 (по умолчанию <code>0</code>)</p>
+<h3 id="remove-caps-channel-mikrotik">remove caps channel mikrotik</h3>
+<p>Удалить канал <strong>CAPsMAN</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_channel</code> - номер порта (0-999)</p>
+<h3 id="set-caps-channel-mikrotik">set caps channel mikrotik</h3>
+<p>Редакторить параметры канала <strong>CAPsMAN</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_channel</code> - номер порта (0-999)</p>
+<p><code>channel_name</code> - название канала</p>
+<p><code>frequency</code> - частота (от 0 до 4294967.29)</p>
+<p><code>secondary_frequency</code> - вторичная частота (от 0 до 4294967.29)</p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>band</code> - канал. на выбор: 2ghz-b | 2ghz-b/g | 2ghz-b/g/n | 2ghz-onlyg | 2ghz-onlyn | 5ghz-a | 5ghz-a/n | 5ghz-onlyn |
+  5ghz-a/n/ac | 5ghz-only-ac (по умолчанию <code>2ghz-b</code>)</p>
+<p><code>tx_power</code> - от -30 до 40 (по умолчанию <code>0</code>)</p>
+<h3 id="add-caps-datapath-mikrotik">add caps datapath mikrotik</h3>
+<p>Добавить <strong>CAPsMAN Datapath</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>datapath_name</code> - название Datapath</p>
+<p><code>mtu</code> - размер MTU (например <code>1500</code>)</p>
+<p><code>local_forwarding</code> - Включить local forwarding? yes или no. 
+  <em>В этом режиме беспроводной интерфейс на CAP ведет себя как обычный интерфейс и участвует в обычной пересылке данных</em></p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>arp</code> - enabled/disabled (по умолчанию <code>disabled</code>)</p>
+<h3 id="remove-caps-datapath-mikrotik">remove caps datapath mikrotik</h3>
+<p>Удалить <strong>CAPsMAN Datapath</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_configuration</code> - номер порта (0-999)</p>
+<h3 id="set-caps-datapath-mikrotik">set caps datapath mikrotik</h3>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_configuration</code> - номер порта (0-999)</p>
+<p><code>datapath_name</code> - название Datapath</p>
+<p><code>mtu</code> - размер MTU (например <code>1500</code>)</p>
+<p><code>local_forwarding</code> - Включить local forwarding? yes или no. 
+  <em>В этом режиме беспроводной интерфейс на CAP ведет себя как обычный интерфейс и участвует в обычной пересылке данных</em></p>
+<ul>
+<li>Опциональные параметры</li>
+</ul>
+<p><code>arp</code> - enabled/disabled (по умолчанию <code>disabled</code>)</p>
+<h3 id="add-caps-security-cfg-mikrotik">add caps security cfg mikrotik</h3>
+<p>Добавить конфигурацию безопасности <strong>CAPsMAN</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>security_cfg_name</code> - название конфигурации</p>
+<p><code>auth_type</code> - тип аутентификации. На выбор: wpa-psk|wpa2-psk|wpa-eap|wpa2-eap</p>
+<p><code>encryption</code> - тип шифрования. На выбор: aes-ccm|tkip</p>
+<p><code>group_encryption</code> - тип шифрования группы. тип шифрования. На выбор: aes-ccm|tkip</p>
+<p><code>key_update</code> - время обновления ключа группы (от 30s до 1h)</p>
+<p><code>pass</code> - кодовое слово (от 8 до 63 символов)</p>
+<h3 id="remove-caps-security-cfg-mikrotik">remove caps security cfg mikrotik</h3>
+<p>Удалить конфигурацию безопасности <strong>CAPsMAN</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_security_cfg</code> - номер порта (0-999)</p>
+<h3 id="set-caps-security-cfg-mikrotik">set caps security cfg mikrotik</h3>
+<p>Изменить данные конфигурации безопасности <strong>CAPsMAN</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_security_cfg</code> - номер порта (0-999)</p>
+<h3 id="add-caps-access-rule-mikrotik">add caps access rule mikrotik</h3>
+<p>Добавить правило доступа <strong>CAPsMAN</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>mac_address</code> - MAC-адрес</p>
+<p><code>mac_mask</code> - MAC-маска</p>
+<p><code>interface</code> - К какому интерфейсу привязать</p>
+<p><code>ssid regexp</code> - регулярное выражение SSID</p>
+<p><code>signal_range</code> - от -120 до 120</p>
+<p><code>time</code> - ??? always</p>
+<p><code>action</code> - на выбор: accept, query-radius, reject</p>
+<h3 id="remove-caps-access-rule-mikrotik">remove caps access rule mikrotik</h3>
+<p>Удалить правило доступа <strong>CAPsMAN</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_access_rule</code> - номер порта (0-999)</p>
+<h3 id="enable-caps-access-rule-mikrotik">enable caps access rule mikrotik</h3>
+<p>Активировать правило доступа <strong>CAPsMAN</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_access_rule</code> - номер порта (0-999)</p>
+<h3 id="disable-caps-access-rule-mikrotik">disable caps access rule mikrotik</h3>
+<p>Деактивировать правило доступа <strong>CAPsMAN</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_access_rule</code> - номер порта (0-999)</p>
+<h3 id="set-caps-access-rule-mikrotik">set caps access rule mikrotik</h3>
+<p>Изменить данные правила доступа <strong>CAPsMAN</strong></p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_access_rule</code> - номер порта (0-999)</p>
+<p><code>mac_address</code> - MAC-адрес</p>
+<p><code>mac_mask</code> - MAC-маска</p>
+<p><code>interface</code> - К какому интерфейсу привязать</p>
+<p><code>ssid regexp</code> - регулярное выражение SSID</p>
+<p><code>signal_range</code> - от -120 до 120</p>
+<p><code>time</code> - ??? always</p>
+<p><code>action</code> - на выбор: accept, query-radius, reject</p>
+<h3 id="add-caps-rate-mikrotik">add caps rate mikrotik</h3>
+<p>Добавить <strong>CAPsMAN</strong> rate</p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>rate_name</code> - название rate</p>
+<p><code>basic_rates</code> - базовое ограничение. На выбор: 1Mbps|2Mbps|5.5Mbps|11Mbps|6Mbps|9Mbps|12Mbps|18Mbps|24Mbps|36Mbps|48Mbp
+s|54Mbps</p>
+<p><code>sup_rates</code> - поддерживаемые ограничения. На выбор: На выбор: 1Mbps|2Mbps|5.5Mbps|11Mbps|6Mbps|9Mbps|12Mbps|18Mbps|24Mbps|36Mbps|48Mbp
+s|54Mbps</p>
+<h3 id="remove-caps-rate-mikrotik">remove caps rate mikrotik</h3>
+<p>Удалить <strong>CAPsMAN</strong> rate</p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_rate</code> - номер порта (0-999)</p>
+<h3 id="set-caps-rate-mikrotik">set caps rate mikrotik</h3>
+<p>Редактировать данные <strong>CAPsMAN</strong> rate</p>
+<ul>
+<li>Обязательные параметры</li>
+</ul>
+<p><code>numbers_caps_rate</code> - номер порта (0-999)</p>
+<p><code>rate_name</code> - название ограничения</p>
+<p><code>basic_rates</code> - базовое ограничение. На выбор: 1Mbps|2Mbps|5.5Mbps|11Mbps|6Mbps|9Mbps|12Mbps|18Mbps|24Mbps|36Mbps|48Mbp
+s|54Mbps</p>
+<p><code>sup_rates</code> - поддерживаемые ограничения. На выбор: На выбор: 1Mbps|2Mbps|5.5Mbps|11Mbps|6Mbps|9Mbps|12Mbps|18Mbps|24Mbps|36Mbps|48Mbp
+s|54Mbps</p>
+<h2 id="cisco">Cisco</h2>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\u041f\u043e\u0438\u0441\u043a", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../assets/javascripts/workers/search.d351de03.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.34eae1b6.min.js"></script>
+      
+    
+  </body>
+</html>
