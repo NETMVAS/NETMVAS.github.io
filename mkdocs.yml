@@ -11,6 +11,8 @@ nav:
         - Главная: feecc/index.md
         - Spoke: feecc/spoke.md
         - Hub: feecc/hub.md
+    - Multi Edge Computing:
+        - Main: multi_edge_computing/index.md
 
 theme:
   name: material
