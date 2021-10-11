@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://NETMVAS.github.io/NETMVAS.github.io/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://NETMVAS.github.io/NETMVAS.github.io/multivendor_ansible/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://NETMVAS.github.io/NETMVAS.github.io/multivendor_ansible/roles/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://NETMVAS.github.io/NETMVAS.github.io/feecc/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://NETMVAS.github.io/NETMVAS.github.io/feecc/spoke/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://NETMVAS.github.io/NETMVAS.github.io/feecc/hub/</loc>
-     <lastmod>2021-08-23</lastmod>
+     <lastmod>2021-10-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://NETMVAS.github.io/NETMVAS.github.io/multi_edge_computing/</loc>
+     <lastmod>2021-10-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
